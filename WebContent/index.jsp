@@ -16,7 +16,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
 
+	$("#addButton").click(function()
+	{
+		$("addList").submit();
+	});
+</script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -29,23 +35,23 @@
 			</div>
 			
 			<div class="col-md-6">
-			<form role="form">
+			<form action="addList.action" method="post" id="addList">
 				<div class="form-group">
 					 
 					<label for="exampleInputEmail1">
 						Name
 					</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" />
+					<input type="text" class="form-control" id="name" name="name" />
 				</div>
 				<div class="form-group">
 					 
 					<label for="exampleInputPassword1">
 						URL
 					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" />
+					<input type="text" class="form-control" id="url" name="url"/>
 				</div>
 					 
-				<button type="submit" class="btn btn-primary">
+				<button type="submit" class="btn btn-primary" id="addButton">
 					ADD
 				</button>
 			</form>
