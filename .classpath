@@ -13,5 +13,15 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.aop-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.asm-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.beans-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.context-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.core-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.expression-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.jdbc-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.transaction-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.web.servlet-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/spring-framework-3.0.2.RELEASE/dist/org.springframework.web-3.0.2.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
