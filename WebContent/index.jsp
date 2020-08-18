@@ -8,10 +8,6 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-<%-- <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-<link rel="stylesheet" type="text/css" href="<%=cp %>/css/bootstrap.min.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script> --%>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -38,14 +34,14 @@
 			<form action="addList.action" method="post" id="addList">
 				<div class="form-group">
 					 
-					<label for="exampleInputEmail1">
+					<label for="name">
 						Name
 					</label>
 					<input type="text" class="form-control" id="name" name="name" />
 				</div>
 				<div class="form-group">
 					 
-					<label for="exampleInputPassword1">
+					<label for="url">
 						URL
 					</label>
 					<input type="text" class="form-control" id="url" name="url"/>
