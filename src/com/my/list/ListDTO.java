@@ -2,7 +2,7 @@ package com.my.list;
 
 public class ListDTO
 {
-	private String name,url,date;
+	private String name,url,wdate;
 
 	public String getName()
 	{
@@ -24,15 +24,17 @@ public class ListDTO
 		this.url = url;
 	}
 
-	public String getDate()
+	public String getWdate()
 	{
-		return date;
+		return wdate;
 	}
 
-	public void setDate(String date)
+	public void setWdate(String wdate)
 	{
-		this.date = date;
+		this.wdate = wdate;
 	}
+
+	
 	
 	
 

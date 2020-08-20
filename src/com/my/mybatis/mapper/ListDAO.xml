@@ -10,5 +10,8 @@
 		INSERT INTO TBL_MYLIST(NAME,URL) VALUES(#{name},#{url})
 	</insert>
 	
+	<select id="lists"  resultType="com.my.list.ListDTO">
+		SELECT NAME,URL,WDATE FROM TBL_MYLIST
+	</select>
 	
 </mapper>  

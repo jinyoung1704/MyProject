@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
    request.setCharacterEncoding("UTF-8");
    String cp = request.getContextPath();
@@ -31,7 +32,7 @@
 			</div>
 			
 			<div class="col-md-6">
-			<form action="addList.action" method="post" id="addList">
+			<form action="addList.action" id="addList">
 				<div class="form-group">
 					 
 					<label for="name">
@@ -96,7 +97,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<c:forEach var="list" items="${lists }" varStatus="status" begin="0" >
+						<tr>
+							<td>${status.count }
+							<td>${list.name }</td>
+							<td><a href="${list.url }">${list.url }</a></td>
+							<td>${list.wdate }</td>
+						</tr>					
+					</c:forEach>
+					<!-- <tr>
 						<td>
 							1
 						</td>
@@ -165,7 +174,7 @@
 						<td>
 							04/04/2012
 						</td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</table>
 		</div>

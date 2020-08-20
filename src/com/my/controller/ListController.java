@@ -26,13 +26,14 @@ import com.my.list.ListDTO;
 	private SqlSession SqlSession;
 	
 	@RequestMapping(value = "/addList.action", method = RequestMethod.GET)
-	public String cateList(Model model, String bid, HttpServletRequest request)
+	public String addList(Model model, String bid, HttpServletRequest request)
 	{
 		HttpSession session = request.getSession();
 		String view=null;
 		String name = request.getParameter("name");
 		String url = request.getParameter("url");
-		
+		System.out.println(name);
+		System.out.println(url);
 		try
 		{
 			IListDAO dao = SqlSession.getMapper(IListDAO.class);
@@ -43,6 +44,32 @@ import com.my.list.ListDTO;
 			dto.setUrl(url);
 			
 			dao.addList(dto);
+			
+		} catch (Exception e)
+		{
+		}
+		
+		
+		view = "redirect:main.action";
+				
+				
+		return view;
+	}
+	
+	@RequestMapping(value = "/main.action", method = RequestMethod.GET)
+	public String mainList(Model model, String bid, HttpServletRequest request)
+	{
+		HttpSession session = request.getSession();
+		String view=null;
+		
+		
+		try
+		{
+			IListDAO dao = SqlSession.getMapper(IListDAO.class);
+			
+			model.addAttribute("lists", dao.lists());
+			
+			
 			
 		} catch (Exception e)
 		{
