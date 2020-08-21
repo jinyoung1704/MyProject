@@ -51,6 +51,9 @@
 				<button type="submit" class="btn btn-primary" id="addButton">
 					ADD
 				</button>
+				<button type="reset" class="btn btn-pirmary" id="resetButton">
+					RESET
+				</button>
 			</form>
 			</div>
 			
@@ -103,6 +106,7 @@
 							<td>${list.name }</td>
 							<td><a href="${list.url }">${list.url }</a></td>
 							<td>${list.wdate }</td>
+							<td><input type="button" id="deleteBtn" value="delete"></td>
 						</tr>					
 					</c:forEach>
 					<!-- <tr>
