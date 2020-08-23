@@ -1,9 +1,6 @@
 
  package com.my.controller;
 
-
-
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -28,12 +25,12 @@ import com.my.list.ListDTO;
 	@RequestMapping(value = "/addList.action", method = RequestMethod.GET)
 	public String addList(Model model, String bid, HttpServletRequest request)
 	{
-		HttpSession session = request.getSession();
 		String view=null;
 		String name = request.getParameter("name");
 		String url = request.getParameter("url");
 		System.out.println(name);
 		System.out.println(url);
+		
 		try
 		{
 			IListDAO dao = SqlSession.getMapper(IListDAO.class);
@@ -47,10 +44,11 @@ import com.my.list.ListDTO;
 			
 		} catch (Exception e)
 		{
+			System.out.println(e.toString());
 		}
 		
 		
-		view = "redirect:main.action";
+		view = "redirect:/main.action";
 				
 				
 		return view;
@@ -76,7 +74,7 @@ import com.my.list.ListDTO;
 		}
 		
 		
-		view = "/index.jsp";
+		view = "index.jsp";
 				
 				
 		return view;
@@ -87,17 +85,17 @@ import com.my.list.ListDTO;
 	public String deleteList(Model model, String bid, HttpServletRequest request)
 	{
 		String view=null;
-		String listname = null;
+		String name = null;
 		HttpSession session = request.getSession();
-		System.out.println("1234");
+		//System.out.println("1234");
+		
 		try
 		{
 			IListDAO dao = SqlSession.getMapper(IListDAO.class);
-			listname = request.getParameter("listname");
-			System.out.println(listname);
+			name = request.getParameter("listname");
+			System.out.println(name);
 			
-			model.addAttribute("lists", dao.lists());
-			
+			dao.deleteList(name);
 			
 			
 		} catch (Exception e)
@@ -105,7 +103,7 @@ import com.my.list.ListDTO;
 		}
 		
 		
-		view = "/index.jsp";
+		view = "redirect:/main.action";
 				
 				
 		return view;

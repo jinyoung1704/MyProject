@@ -6,12 +6,18 @@
   
 <mapper namespace="com.my.list.IListDAO">
 	
+	<!--리스트 추가  -->
 	<insert id="addList">
 		INSERT INTO TBL_MYLIST(NAME,URL) VALUES(#{name},#{url})
 	</insert>
 	
+	<!--리스트 내역 부르기  -->
 	<select id="lists"  resultType="com.my.list.ListDTO">
 		SELECT NAME,URL,WDATE FROM TBL_MYLIST
 	</select>
 	
+	<!--리스트 삭제  -->
+	<delete id="deleteList">
+		DELETE FROM TBL_MYLIST WHERE NAME = #{name}
+	</delete>
 </mapper>  
