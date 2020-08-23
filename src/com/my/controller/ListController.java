@@ -81,6 +81,35 @@ import com.my.list.ListDTO;
 				
 		return view;
 	}
+	
+	
+	@RequestMapping(value = "/deletelist.action", method = RequestMethod.GET)
+	public String deleteList(Model model, String bid, HttpServletRequest request)
+	{
+		String view=null;
+		String listname = null;
+		HttpSession session = request.getSession();
+		System.out.println("1234");
+		try
+		{
+			IListDAO dao = SqlSession.getMapper(IListDAO.class);
+			listname = request.getParameter("listname");
+			System.out.println(listname);
+			
+			model.addAttribute("lists", dao.lists());
+			
+			
+			
+		} catch (Exception e)
+		{
+		}
+		
+		
+		view = "/index.jsp";
+				
+				
+		return view;
+	}
   
   
   }

@@ -1,3 +1,4 @@
+<%@page import="java.util.function.Function"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
@@ -12,13 +13,29 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
-	$("#addButton").click(function()
+	$(document).ready(function()
 	{
-		$("addList").submit();
+		$("#addButton").click(function()
+		{
+			$("addList").submit();
+		});
 	});
+
+	
+	function deleteList(obj)
+	{
+		//alert("확인");
+		var listname = obj.getAttribute("id");
+		alert(listname);
+		$(location).attr("href","deletelist.action?listname=" + listname);
+	}
+	
+	
+	
 </script>
 </head>
 <body>
@@ -106,7 +123,7 @@
 							<td>${list.name }</td>
 							<td><a href="${list.url }">${list.url }</a></td>
 							<td>${list.wdate }</td>
-							<td><input type="button" id="deleteBtn" value="delete"></td>
+							<td><input type="button" id="${list.name }" class="btn btn-pirmary" value="delete" onclick="deleteList(this)"></td>
 						</tr>					
 					</c:forEach>
 					<!-- <tr>
