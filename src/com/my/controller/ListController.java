@@ -57,7 +57,6 @@ import com.my.list.ListDTO;
 	@RequestMapping(value = "/main.action", method = RequestMethod.GET)
 	public String mainList(Model model, String bid, HttpServletRequest request)
 	{
-		HttpSession session = request.getSession();
 		String view=null;
 		
 		
@@ -74,7 +73,7 @@ import com.my.list.ListDTO;
 		}
 		
 		
-		view = "index.jsp";
+		view = "main.jsp";
 				
 				
 		return view;
