@@ -208,7 +208,7 @@
 		</div>
 		
 		<div class="col-md-6">
-			<nav>
+			<!-- <nav>
 				<ul class="pagination">
 					<li class="page-item">
 						<a class="page-link" href="#">Previous</a>
@@ -232,7 +232,34 @@
 						<a class="page-link" href="#">Next</a>
 					</li>
 				</ul>
-			</nav>
+			</nav> -->
+			
+			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
+		<c:if test="${dataCount != 0 }">
+			<tr style="background-color: #FFFFFF">
+			 	<td align="center" colspan="3">
+			 		${pageIndexList }
+			 	</td>
+			 </tr>
+			 
+			 <tr align="center" style="height: 30px;">
+			 	<td colspan="3">
+			 		
+			 		<!-- 검색 폼 구성 -->
+			 		<form name="searchForm" method="post">
+			 			<select name="searchKey" class="selectField"
+			 				style="height: 22px;">
+			 				<option value="subject">제목</option>
+			 				<option value="userName">작성자</option> 
+			 			</select>
+			 			
+			 			<input type="text" name="searchValue" class="boxTF">
+			 			<input type="button" value=" 검 색 " class="btn2"
+			 				onclick="searchList()">
+			 		</form>
+			 	</td>
+			 </tr>
+		</c:if>
 		</div>
 		
 		<div class="col-md-3">

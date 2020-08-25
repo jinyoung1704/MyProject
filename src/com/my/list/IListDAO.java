@@ -12,4 +12,7 @@ public interface IListDAO
 	
 	//리스트 삭제
 	public void deleteList(String name);
+	
+	//페이징
+	public int getCount();
 }

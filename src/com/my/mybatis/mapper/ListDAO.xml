@@ -20,4 +20,10 @@
 	<delete id="deleteList">
 		DELETE FROM TBL_MYLIST WHERE NAME = #{name}
 	</delete>
+	
+	<!--count 함수  -->
+	<select id="getCount" resultType="java.lang.Integer">
+	SELECT COUNT(*)
+	FROM TBL_MYLIST
+	</select>
 </mapper>  
