@@ -127,76 +127,7 @@
 							<td><input type="button" id="${list.name }" class="btn btn-pirmary" value="delete" onclick="deleteList(this)"></td>
 						</tr>					
 					</c:forEach>
-					<!-- <tr>
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							Default
-						</td>
-						<td>
-							01/04/2012
-						</td>
-					</tr>
-					<tr class="table-active">
-						<td>
-							2
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							Approved
-						</td>
-						<td>
-							01/04/2012
-						</td>
-					</tr>
-					<tr class="table-success">
-						<td>
-							3
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							Declined
-						</td>
-						<td>
-							02/04/2012
-						</td>
-					</tr>
-					<tr class="table-warning">
-						<td>
-							4
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							Pending
-						</td>
-						<td>
-							03/04/2012
-						</td>
-					</tr>
-					<tr class="table-danger">
-						<td>
-							5
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							Call in to confirm
-						</td>
-						<td>
-							04/04/2012
-						</td>
-					</tr> -->
+				
 				</tbody>
 			</table>
 		</div>
@@ -236,16 +167,29 @@
 			
 			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
 		<c:if test="${dataCount != 0 }">
-			<tr style="background-color: #FFFFFF">
+			<%-- <tr style="background-color: #FFFFFF">
 			 	<td align="center" colspan="3">
 			 		${pageIndexList }
 			 	</td>
-			 </tr>
+			 </tr> --%>
 			 
+			 <nav>
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="main.action?pageNum=1">Previous</a>
+					</li>
+					
+					<li class="page-item">
+						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
+					</li>
+		
+				</ul>
+			</nav>
+			<!--  
 			 <tr align="center" style="height: 30px;">
 			 	<td colspan="3">
 			 		
-			 		<!-- 검색 폼 구성 -->
+			 		검색 폼 구성
 			 		<form name="searchForm" method="post">
 			 			<select name="searchKey" class="selectField"
 			 				style="height: 22px;">
@@ -258,7 +202,7 @@
 			 				onclick="searchList()">
 			 		</form>
 			 	</td>
-			 </tr>
+			 </tr> -->
 		</c:if>
 		</div>
 		
