@@ -138,12 +138,19 @@
 		<div class="col-md-3">
 		</div>
 		
+		
 		<div class="col-md-6">
-			<!-- <nav>
+		<%-- <c:if test="${dataCount != 0 }">
+			<nav>
 				<ul class="pagination">
 					<li class="page-item">
 						<a class="page-link" href="#">Previous</a>
 					</li>
+			<c:forEach var="pagelist" items="${pageIndexList }">
+				<li class="page-item">
+						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
+					</li>
+			</c:forEach>
 					<li class="page-item">
 						<a class="page-link" href="#">1</a>
 					</li>
@@ -163,7 +170,9 @@
 						<a class="page-link" href="#">Next</a>
 					</li>
 				</ul>
-			</nav> -->
+			</nav>
+			</c:if> --%>
+			
 			
 			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
 		<c:if test="${dataCount != 0 }">
@@ -178,10 +187,13 @@
 					<li class="page-item">
 						<a class="page-link" href="main.action?pageNum=1">Previous</a>
 					</li>
-					
 					<li class="page-item">
 						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
 					</li>
+					<li class="page-item">
+						<a class="page-link" href="main.action?pageNum=1">Next</a>
+					</li>
+					
 		
 				</ul>
 			</nav>
