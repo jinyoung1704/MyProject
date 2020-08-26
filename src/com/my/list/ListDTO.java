@@ -3,6 +3,7 @@ package com.my.list;
 public class ListDTO
 {
 	private String name,url,wdate;
+	private int start,end;
 
 	public String getName()
 	{
@@ -34,6 +35,28 @@ public class ListDTO
 		this.wdate = wdate;
 	}
 
+	public int getStart()
+	{
+		return start;
+	}
+
+	public void setStart(int start)
+	{
+		this.start = start;
+	}
+
+	public int getEnd()
+	{
+		return end;
+	}
+
+	public void setEnd(int end)
+	{
+		this.end = end;
+	}
+
+	
+	
 	
 	
 	

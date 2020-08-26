@@ -8,7 +8,7 @@ public interface IListDAO
 	public void addList(ListDTO dto);
 	
 	//리스트 불러오기
-	public ArrayList<ListDTO> lists();
+	public ArrayList<ListDTO> lists(ListDTO dto);
 	
 	//리스트 삭제
 	public void deleteList(String name);

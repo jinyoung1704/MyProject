@@ -73,18 +73,20 @@ import com.my.list.ListDTO;
 			// 두개 반드시 선언
 			Paging paging = new Paging();
 			String pageNum = request.getParameter("pageNum");		
-			
+			System.out.println(pageNum);
 			
 			//테이블에서 가져올 리스트의 시작과 끝 위치
 			int start = paging.getStart(pageNum,count );
+			System.out.println(start);
 			int end = paging.getEnd(pageNum, count);
+			System.out.println(end);
 			
 			// 페이지번호를 받아온 
 			String pageIndexList = paging.pageIndexList(pageNum, count);
 			
 			
 			// 시작과 끝 dto에 담기( 여기선 IndexDTO로 했지만 매개변수로 DTO를 쓰고있는경우는 그 DTO안에 start,end만들어야함)
-			IndexDTO dto = new IndexDTO();
+			ListDTO dto = new ListDTO();
 			dto.setStart(start);
 			dto.setEnd(end);
 			
@@ -95,7 +97,7 @@ import com.my.list.ListDTO;
 			model.addAttribute("pageIndexList", pageIndexList);
 			
 			
-			model.addAttribute("lists", dao.lists());
+			model.addAttribute("lists", dao.lists(dto));
 			
 			
 			
