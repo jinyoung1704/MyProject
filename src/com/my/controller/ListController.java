@@ -83,7 +83,7 @@ import com.my.list.ListDTO;
 			
 			// 페이지번호를 받아온 
 			String pageIndexList = paging.pageIndexList(pageNum, count);
-			System.out.println(pageIndexList);
+			//System.out.println(pageIndexList);
 			
 			// 시작과 끝 dto에 담기( 여기선 IndexDTO로 했지만 매개변수로 DTO를 쓰고있는경우는 그 DTO안에 start,end만들어야함)
 			ListDTO dto = new ListDTO();

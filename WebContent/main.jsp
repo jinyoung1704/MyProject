@@ -139,48 +139,30 @@
 		</div>
 		
 		
+		
+		
 		<div class="col-md-6">
-		<%-- <c:if test="${dataCount != 0 }">
-			<nav>
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="#">Previous</a>
-					</li>
-			<c:forEach var="pagelist" items="${pageIndexList }">
-				<li class="page-item">
-						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
-					</li>
-			</c:forEach>
-					<li class="page-item">
-						<a class="page-link" href="#">1</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">2</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">3</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">4</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">5</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">Next</a>
-					</li>
-				</ul>
-			</nav>
-			</c:if> --%>
+		
+		<!--검색 영역  -->
+			<tr align="right" style="height: 30px;" class="form-control">
+			 	<td colspan="3" >
+			 	
+			 		<form name="searchForm" method="post">
+			 			<select name="searchKey" class="form-inline" style="height: 22px;width: 100px;">
+			 				<option value="subject">제목</option>
+			 			</select>
+			 			
+			 			<input type="text" name="searchValue" class="form-inline boxTF" style="width:30%;">
+			 			<input type="button" value=" 검 색 " class="btn btn-pirmary"
+			 				onclick="">
+			 		</form>
+			 	</td>
+			 </tr>
 			
 			
 			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
 		<c:if test="${dataCount != 0 }">
-			<%-- <tr style="background-color: #FFFFFF">
-			 	<td align="center" colspan="3">
-			 		${pageIndexList }
-			 	</td>
-			 </tr> --%>
+			
 			 
 			 <nav>
 				<ul class="pagination">
@@ -197,24 +179,8 @@
 		
 				</ul>
 			</nav>
-			<!--  
-			 <tr align="center" style="height: 30px;">
-			 	<td colspan="3">
-			 		
-			 		검색 폼 구성
-			 		<form name="searchForm" method="post">
-			 			<select name="searchKey" class="selectField"
-			 				style="height: 22px;">
-			 				<option value="subject">제목</option>
-			 				<option value="userName">작성자</option> 
-			 			</select>
-			 			
-			 			<input type="text" name="searchValue" class="boxTF">
-			 			<input type="button" value=" 검 색 " class="btn2"
-			 				onclick="searchList()">
-			 		</form>
-			 	</td>
-			 </tr> -->
+			 
+			 
 		</c:if>
 		</div>
 		
