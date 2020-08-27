@@ -35,7 +35,10 @@
 		$(location).attr("href","deletelist.action?listname=" + listname);
 	}
 	
-	
+	function search()
+	{
+		alert("확인");
+	}
 	
 </script>
 </head>
@@ -154,8 +157,7 @@
 			 			</select>
 			 		
 			 			<input type="text" name="searchValue" class="form-control boxTF" style="width:30%;">
-			 			<input type="button" value=" 검 색 " class="btn btn-pirmary"
-			 				onclick="">
+			 			<input type="button" value=" 검 색 " class="btn btn-pirmary" onclick="search()">
 			 		
 			 	</div></form>
 			 </tr>
