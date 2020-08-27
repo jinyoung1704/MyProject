@@ -145,18 +145,19 @@
 		
 		<!--검색 영역  -->
 			<tr align="right" style="height: 30px;" class="form-control">
-			 	<td colspan="3" >
 			 	
-			 		<form name="searchForm" method="post">
-			 			<select name="searchKey" class="form-inline" style="height: 22px;width: 100px;">
+			 	<form name="searchForm" method="post">
+			 	<div class="form-inline col-md-12">
+			 			<select name="searchKey" class="form-control" style="height: 33px;width: 100px;">
 			 				<option value="subject">제목</option>
+			 				<option value="url">주소</option>
 			 			</select>
-			 			
-			 			<input type="text" name="searchValue" class="form-inline boxTF" style="width:30%;">
+			 		
+			 			<input type="text" name="searchValue" class="form-control boxTF" style="width:30%;">
 			 			<input type="button" value=" 검 색 " class="btn btn-pirmary"
 			 				onclick="">
-			 		</form>
-			 	</td>
+			 		
+			 	</div></form>
 			 </tr>
 			
 			
