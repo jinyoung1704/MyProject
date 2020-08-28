@@ -176,7 +176,7 @@
 						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
 					</li>
 					<li class="page-item">
-						<a class="page-link" href="main.action?pageNum=1">Next</a>
+						<a class="page-link" href="main.action?pageNum=${currentPage }">Next</a>
 					</li>
 					
 		

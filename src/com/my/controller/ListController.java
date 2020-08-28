@@ -25,6 +25,7 @@ import com.my.list.ListDTO;
 	@Autowired
 	private SqlSession SqlSession;
 	
+	//추가 
 	@RequestMapping(value = "/addList.action", method = RequestMethod.GET)
 	public String addList(Model model, String bid, HttpServletRequest request)
 	{
@@ -57,6 +58,7 @@ import com.my.list.ListDTO;
 		return view;
 	}
 	
+	//메인 리스트 
 	@RequestMapping(value = "/main.action", method = RequestMethod.GET)
 	public String mainList(Model model, HttpServletRequest request)
 	{
@@ -112,7 +114,7 @@ import com.my.list.ListDTO;
 		return view;
 	}
 	
-	
+	//삭제
 	@RequestMapping(value = "/deletelist.action", method = RequestMethod.GET)
 	public String deleteList(Model model, String bid, HttpServletRequest request)
 	{
