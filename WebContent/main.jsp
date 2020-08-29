@@ -100,14 +100,14 @@
  -->
 	
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-2">
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-8">
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>
-							Number
+							Num
 						</th>
 						<th>
 							Name
@@ -125,7 +125,7 @@
 						<tr>
 							<td>${status.count }
 							<td>${list.name }</td>
-							<td><a href="${list.url }">${list.url }</a></td>
+							<td style="height:100px;"><a href="${list.url }">${list.url }</a></td>
 							<td>${list.wdate }</td>
 							<td><input type="button" id="${list.name }" class="btn btn-pirmary" value="delete" onclick="deleteList(this)"></td>
 						</tr>					
@@ -134,7 +134,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-2">
 		</div>
 	</div>
 	<div class="row">
@@ -164,7 +164,7 @@
 			
 			
 			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
-		<c:if test="${dataCount != 0 }">
+		
 			
 			 
 			 <nav>
@@ -172,11 +172,23 @@
 					<li class="page-item">
 						<a class="page-link" href="main.action?pageNum=1">Previous</a>
 					</li>
+			<c:if test="${dataCount != 0 }">
 					<li class="page-item">
-						<a class="page-link" href="${pageIndexList }">${pageIndexList }</a>
+						${pageIndexList}
 					</li>
+			</c:if>
 					<li class="page-item">
-						<a class="page-link" href="main.action?pageNum=${currentPage }">Next</a>
+						<c:choose>
+							<c:when test="${currentPage==null }">
+								<a class="page-link" href="main.action?pageNum=2">Next</a>
+							</c:when>
+						 	
+						 	<c:when test="${currentPage != null }">
+						 		<a class="page-link" href="main.action?pageNum=${currentPage+1 }">Next</a>
+						 	</c:when>
+						
+						</c:choose>
+						
 					</li>
 					
 		
@@ -184,7 +196,7 @@
 			</nav>
 			 
 			 
-		</c:if>
+		
 		</div>
 		
 		<div class="col-md-3">

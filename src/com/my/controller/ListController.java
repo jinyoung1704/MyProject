@@ -75,7 +75,7 @@ import com.my.list.ListDTO;
 			// 두개 반드시 선언
 			Paging paging = new Paging();
 			String pageNum = request.getParameter("pageNum");		
-			//System.out.println(pageNum);
+			System.out.println(pageNum);
 			
 			//테이블에서 가져올 리스트의 시작과 끝 위치
 			int start = paging.getStart(pageNum,count );
@@ -97,6 +97,7 @@ import com.my.list.ListDTO;
 			
 			
 			model.addAttribute("pageIndexList", pageIndexList);
+			model.addAttribute("currentPage",pageNum);
 			
 			
 			model.addAttribute("lists", dao.lists(dto));
@@ -126,7 +127,7 @@ import com.my.list.ListDTO;
 		{
 			IListDAO dao = SqlSession.getMapper(IListDAO.class);
 			name = request.getParameter("listname");
-			System.out.println(name);
+			//System.out.println(name);
 			
 			dao.deleteList(name);
 			
