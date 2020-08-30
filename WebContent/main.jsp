@@ -35,11 +35,26 @@
 		$(location).attr("href","deletelist.action?listname=" + listname);
 	}
 	
-	function search()
+	/* function search()
 	{
 		alert("확인");
-	}
+	} */
 	
+	//검색버튼 클릭 시 이벤트 
+	function search(obj)
+	{
+		alert("확인");
+		var data = obj.previousSibling.previousSibling;	
+		
+		// 데이터 확인
+		console.log(obj.previousSibling.previousSibling);
+		 console.log(data.value);
+		 //console.log(filter);
+		var searchKeyword = data.value;
+		//var filter = document.getElementById("filter").value;
+		
+		//location.href="search.action?keyword=" +searchKeyword +"&filter="+filter;
+	}
 </script>
 </head>
 <body>
@@ -163,7 +178,7 @@
 			 			</select>
 			 		
 			 			<input type="text" name="searchValue" class="form-control boxTF" style="width:30%;">
-			 			<input type="button" value=" 검 색 " class="btn btn-pirmary" onclick="search()">
+			 			<span class="search"><input type="button" class="btn search" onclick="search(this)"></span>
 			 		
 			 	</div></form>
 			 </tr>
