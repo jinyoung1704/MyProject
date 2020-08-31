@@ -26,7 +26,7 @@
 		
 	});
 
-	
+	//리스트 삭제
 	function deleteList(obj)
 	{
 		//alert("확인");
@@ -35,10 +35,6 @@
 		$(location).attr("href","deletelist.action?listname=" + listname);
 	}
 	
-	/* function search()
-	{
-		alert("확인");
-	} */
 	
 	//검색버튼 클릭 시 이벤트 
 	function search(obj)
@@ -100,23 +96,6 @@
 	</div>
 	
 	
-	
-<!-- 	
-	<div class="row">
-	
-		<div class="col-md-3">
-		</div>
-		
-		<div class="col-md-6">
-		<span class="glyphicon glyphicon-grain"></span>
-		</div>
-		
-		<div class="col-md-3">
-		</div>
-		
-	</div>
- -->
-	
 	<div class="row">
 		<div class="col-md-2">
 		
@@ -162,15 +141,13 @@
 		<div class="col-md-3">
 		</div>
 		
-		
-		
-		
 		<div class="col-md-6">
 		
 		<!--검색 영역  -->
-			<tr align="right" style="height: 30px;" class="form-control">
+			
 			 	
-			 	<form name="searchForm" method="post">
+		<form name="searchForm" method="post">
+			 <tr align="right" style="height: 30px;" class="form-control">
 			 	<div class="form-inline col-md-12">
 			 			<select name="searchKey" class="form-control" style="height: 33px;width: 100px;">
 			 				<option value="subject">제목</option>
@@ -180,14 +157,12 @@
 			 			<input type="text" name="searchValue" class="form-control boxTF" style="width:30%;">
 			 			<span class="search"><input type="button" class="btn search" onclick="search(this)"></span>
 			 		
-			 	</div></form>
+			 	</div>
 			 </tr>
+		</form>	
 			
-			
-			<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
+	<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
 		
-			
-			 
 			 <nav>
 				<ul class="pagination">
 					<li class="page-item">
@@ -206,13 +181,10 @@
 						 	
 						 	<c:when test="${currentPage != null }">
 						 		<a class="page-link" href="main.action?pageNum=${currentPage+1 }">Next</a>
-						 	</c:when>
-						
+						 	</c:when>	
 						</c:choose>
 						
 					</li>
-					
-		
 				</ul>
 			</nav>
 			 
