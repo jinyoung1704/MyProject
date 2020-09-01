@@ -36,21 +36,7 @@
 	}
 	
 	
-	//검색버튼 클릭 시 이벤트 
-	function search(obj)
-	{
-		alert("확인");
-		var data = obj.previousSibling.previousSibling;	
-		
-		// 데이터 확인
-		console.log(obj.previousSibling.previousSibling);
-		 console.log(data.value);
-		 //console.log(filter);
-		var searchKeyword = data.value;
-		//var filter = document.getElementById("filter").value;
-		
-		//location.href="search.action?keyword=" +searchKeyword +"&filter="+filter;
-	}
+
 </script>
 </head>
 <body>
@@ -143,23 +129,6 @@
 		
 		<div class="col-md-6">
 		
-		<!--검색 영역  -->
-			
-			 	
-		<form name="searchForm" method="post">
-			 <tr align="right" style="height: 30px;" class="form-control">
-			 	<div class="form-inline col-md-12">
-			 			<select name="searchKey" class="form-control" style="height: 33px;width: 100px;">
-			 				<option value="subject">제목</option>
-			 				<option value="url">주소</option>
-			 			</select>
-			 		
-			 			<input type="text" name="searchValue" class="form-control boxTF" style="width:30%;">
-			 			<span class="search"><input type="button" class="btn search" onclick="search(this)"></span>
-			 		
-			 	</div>
-			 </tr>
-		</form>	
 			
 	<!-- 페이징 처리에 따른 페이지 인덱스 적용  -->
 		
