@@ -10,7 +10,8 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -31,7 +32,7 @@
 	{
 		//alert("확인");
 		var listname = obj.getAttribute("id");
-		alert(listname);
+		//alert(listname);
 		$(location).attr("href","deletelist.action?listname=" + listname);
 	}
 	
